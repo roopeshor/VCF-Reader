@@ -6,7 +6,7 @@ import quopri
 ARRAY_DEL = ','
 FIELD_RE = r"[a-zA-Z0-9;=\-]+:"
 CSV_SEPARATOR = ','
-IGNORED_FIELDS = ["VERSION", "PHOTO;ENCODING=BASE64;JPEG"]
+IGNORED_FIELDS = ["VERSION"]
 
 contacts = []
 field_set = set([])
