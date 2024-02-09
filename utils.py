@@ -5,9 +5,10 @@ import array
 
 
 FIELD_RE = r"[a-zA-Z0-9;=\-]+:"
-IGNORED_FIELDS = ["VERSION", "N", "PHOTO;ENCODING=BASE64;JPEG"]
+IGNORED_FIELDS = ["VERSION", "N"]
 XC = "X-ANDROID-CUSTOM"
 REMOVE_PH_DASH = True
+
 
 def decode_strs(field, value):
     """Decodes strings
@@ -63,6 +64,7 @@ def format_tel(contact):
         else:
             contact[fname] = fmt_number(contact[t])
         del contact[t]
+
 
 # preprocess fields (ie replace by aliases)
 def preprocess_fields(contact):
