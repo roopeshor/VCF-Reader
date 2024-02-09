@@ -1,5 +1,6 @@
 ALIASES = {
 	"FN": "Name",
+	"NOTE": "Note",
 	"X-ANDROID-CUSTOM":	{
 		"relation" : {
 			'0': "Custom",
