@@ -1,3 +1,4 @@
 *.vcf
 *.csv
 *.json
+__pycache__
