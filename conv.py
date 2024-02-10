@@ -78,23 +78,23 @@ def print_help():
     exit(1)
 
 
-if len(sys.argv) < 2:
-    print_help()
-
-FILE = sys.argv[1]
-if FILE[0] == "-":
-    print_help()
-
-for i in range(2, len(sys.argv[2:]) + 2):
-    if sys.argv[i] == "-json":
-        try:
-            JSON_FILE = sys.argv[i + 1]
-        except:
-            print_help()
-    elif sys.argv[i] == "-csv":
-        try:
-            CSV_FILE = sys.argv[i + 1]
-        except:
-            print_help()
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print_help()
+
+    FILE = sys.argv[1]
+    if FILE[0] == "-":
+        print_help()
+
+    for i in range(2, len(sys.argv[2:]) + 2):
+        if sys.argv[i] == "-json":
+            try:
+                JSON_FILE = sys.argv[i + 1]
+            except:
+                print_help()
+        elif sys.argv[i] == "-csv":
+            try:
+                CSV_FILE = sys.argv[i + 1]
+            except:
+                print_help()
     conv()
