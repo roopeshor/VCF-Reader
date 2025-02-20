@@ -66,8 +66,16 @@ def format_tel(contact):
         del contact[t]
 
 
-# preprocess fields (ie replace by aliases)
 def preprocess_fields(contact):
+    """Removes ignored fields, decodes strings and replaces field names
+    with aliases
+
+    Args:
+        contact (object): 
+
+    Returns:
+        object
+    """
     c2 = {}
     for field in contact.copy():
         if field in IGNORED_FIELDS:
@@ -95,9 +103,17 @@ def preprocess_fields(contact):
     return c2
 
 
-# convert vcf to array of contacts object
 def toObj(f):
+    """convert vcf to array of contacts object
+
+    Args:
+        f : file
+
+    Returns:
+        array: array of contacts
+    """
     field = ""
+    print(type(f))
     contact = {}
     contacts = []
     for i, ln in enumerate(f):
